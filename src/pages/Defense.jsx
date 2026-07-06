@@ -7,12 +7,12 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import t90SliderImg from '../assets/slider/defence/tanks.webp';
-import g3000SliderImg from '../assets/slider/defence/cockpit.webp';
-import lockerSliderImg from '../assets/slider/defence/smart_locker_defense.webp';
-import streamingSliderImg from '../assets/slider/defence/secure_comm.webp';
-import socSliderImg from '../assets/slider/defence/soc_modernization.png';
-import aiZoneSliderImg from '../assets/slider/defence/ai_zone.png';
+const t90SliderImg = '/assets/img/slider/defence/tanks.webp';
+const g3000SliderImg = '/assets/img/slider/defence/cockpit.webp';
+const lockerSliderImg = '/assets/img/slider/defence/smart_locker_defense.webp';
+const streamingSliderImg = '/assets/img/slider/defence/secure_comm.webp';
+const socSliderImg = '/assets/img/slider/defence/soc_modernization.png';
+const aiZoneSliderImg = '/assets/img/slider/defence/ai_zone.png';
 
 const Defense = () => {
   const { productId } = useParams();
