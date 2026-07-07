@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Clients from '../components/Clients';
 import AboutPreview from '../components/AboutPreview';
-import Stats from '../components/Stats';
+import ProofOfWork from '../components/ProofOfWork';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <main id="main">
         <Clients />
         <AboutPreview />
-        <Stats />
+        <ProofOfWork />
       </main>
     </>
   );
