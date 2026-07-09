@@ -330,44 +330,7 @@ const SmartHospitals = () => {
             </div>
           </SwiperSlide>
 
-          {/* Slide 3 - Asset Management */}
-          <SwiperSlide>
-            <div className="slider-redesign">
-              <div className="slider-wrap">
-                <div className="stage">
-                  <div className="card">
-                    <div className="card-grid">
-                      <div className="text-col">
-                        <span className="tag">HEALTHCARE &bull; OPERATIONS</span>
-                        <h1>Intelligent<br/><span>Asset Management</span></h1>
-                        <p className="subtext">Track and optimize equipment usage in real time.</p>
-                        <div className="cap-grid">
-                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-map"></i></span><span className="cap-label">Tracking</span></div>
-                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-bar-chart-alt-2"></i></span><span className="cap-label">Utilization</span></div>
-                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-wrench"></i></span><span className="cap-label">Maintenance</span></div>
-                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-layer"></i></span><span className="cap-label">Efficiency</span></div>
-                        </div>
-                        <div className="cta-row">
-                          <a href="#asset" onClick={(e) => { e.preventDefault(); assetRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="btn btn-primary">Explore Solution <i className="bx bx-right-arrow-alt"></i></a>
-                        </div>
-                      </div>
-                      <div className="image-col">
-                        <div className="image-panel">
-                          <img src="/assets/img/manufacturing_automations/hosp_asset.webp" alt="Asset Management" />
-                        </div>
-                        <div className="spec-chip">
-                          <div className="spec-label">Key Differentiator</div>
-                          <div className="spec-value">Visibility Across Every Department</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          {/* Slide 4 - Nurse Tablet Locker */}
+          {/* Slide 3 - Nurse Tablet Locker */}
           <SwiperSlide>
             <div className="slider-redesign">
               <div className="slider-wrap">
@@ -404,7 +367,7 @@ const SmartHospitals = () => {
             </div>
           </SwiperSlide>
 
-          {/* Slide 5 - Impress Stock AI Medicine */}
+          {/* Slide 4 - Impress Stock AI Medicine */}
           <SwiperSlide>
             <div className="slider-redesign">
               <div className="slider-wrap">
@@ -902,197 +865,13 @@ const SmartHospitals = () => {
           </section>
 
           {/* =========================================
-              PRODUCT 3: Intelligent Asset Management
-          ========================================= */}
-          <section id="asset" ref={assetRef} style={{ background: '#f8fafc', paddingBottom: '20px' }}>
-            <div className="caution-stripe msl-bg-navy" style={{ padding: 'clamp(15px, 5vw, 60.0px) 0', borderBottom: '4px solid #c0001a', marginBottom: '40px' }}>
-              <div className="container text-center position-relative" style={{ zIndex: 1 }}>
-                <span style={{ display: 'inline-block', background: 'rgba(255,255,255,0.1)', color: '#fff', fontSize: '12px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', padding: '6px 16px', borderRadius: '30px', marginBottom: '20px' }}>
-                  Product 03
-                </span>
-                <h2 style={{ color: '#fff', fontSize: 'clamp(18px, 4vw, 36.0px)', fontWeight: '800', marginBottom: '15px' }}>
-                  Intelligent Asset Tracking
-                </h2>
-                <p style={{ color: '#cbd5e1', fontSize: 'clamp(15px, 3vw, 18.0px)', maxWidth: '800px', margin: '0 auto', fontWeight: '300' }}>
-                  <strong style={{color: '#fff', fontWeight: '600'}}>Real-time Indoor Tracking & Utilization.</strong><br/>
-                  Never lose critical equipment again. Real-time indoor tracking and monitoring for high-value hospital assets.
-                </p>
-              </div>
-            </div>
-
-            <div className="container">
-              <div className="msl-product-wrapper" data-aos="fade-up">
-                {/* Intro & Problems Block */}
-                <div style={{ padding: 'clamp(15px, 5vw, 40.0px) clamp(15px, 5vw, 60.0px) clamp(10px, 3vw, 20.0px)' }}>
-                  <div className="row g-5 align-items-center">
-                    {/* Left Column - Vertical Image */}
-                    <div className="col-lg-5">
-                      <div className="rounded-image-wrapper h-100" style={{ boxShadow: '0 20px 40px rgba(0,0,0,0.1)', borderRadius: '24px', overflow: 'hidden', minHeight: '600px', display: 'flex' , flexWrap: 'wrap'}}>
-                        <img src="/assets/img/manufacturing_automations/asset_map.webp" alt="Intelligent Asset Tracking" style={{ width: '100%', height: '100%', minHeight: '600px', objectFit: 'cover', display: 'block' }} />
-                      </div>
-                    </div>
-                
-                    {/* Right Column - Content */}
-                    <div className="col-lg-7">
-                      <div className="d-flex flex-column justify-content-center">
-                        <span style={{ display: 'inline-block', background: 'rgba(192,0,26,0.1)', color: '#c0001a', fontSize: '12px', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '20px', marginBottom: '15px', alignSelf: 'flex-start' }}>
-                          Real-Time Tracking
-                        </span>
-                        <h3 className="msl-navy" style={{ fontSize: 'clamp(18px, 4vw, 32.0px)', fontWeight: '800', marginBottom: '20px', lineHeight: '1.3' }}>
-                          Never Lose Critical Equipment. <span style={{color: '#c0001a'}}>Maximize Utilization.</span>
-                        </h3>
-                        
-                        {/* Industry Challenges */}
-                        <div className="mb-4">
-                          <p className="msl-text-body" style={{ fontSize: '15px', lineHeight: '1.6', marginBottom: '15px' }}>
-                            Nurses waste critical minutes every shift searching for IV pumps, wheelchairs, and defibrillators. This leads to equipment hoarding, wasted clinical hours, and unnecessary capital expenditure. The challenges we face:
-                          </p>
-                          <ul className="msl-text-body" style={{ paddingLeft: '20px', listStyleType: 'disc', fontSize: '14px', lineHeight: '1.5' }}>
-                            <li style={{ marginBottom: '8px' }}><strong>Wasted Nursing Hours:</strong> High-value clinical time spent searching for assets.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>Equipment Hoarding:</strong> Staff hiding equipment for future shifts to avoid shortages.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>Excess Purchases:</strong> Buying new equipment when existing assets are underutilized.</li>
-                            <li style={{ marginBottom: '8px' }}><strong>Missed Maintenance:</strong> Inability to locate devices for scheduled preventive service.</li>
-                          </ul>
-                        </div>
-                    
-                        {/* Our Solution Highlights */}
-                        <div style={{ background: '#1a2a4a', borderRadius: '16px', padding: 'clamp(10px, 3vw, 25.0px) clamp(15px, 5vw, 30.0px)', color: '#fff', boxShadow: '0 15px 35px rgba(26,42,74,0.15)' }}>
-                          <h6 style={{ color: '#fff', fontWeight: '800', fontSize: 'clamp(15px, 3vw, 18.0px)', marginBottom: '15px' }}>Our Intelligent Solution</h6>
-                          <p style={{ color: '#cbd5e1', fontSize: '14px', lineHeight: '1.6', margin: 0 }}>
-                            An active indoor positioning system powered by <strong>BLE and RFID tags, precise indoor gateways, and predictive analytics</strong>. Instantly locate any tagged asset across the hospital floor map in real time.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* System Architecture */}
-                <div style={{ padding: 'clamp(15px, 5vw, 40.0px) clamp(15px, 5vw, 60.0px) clamp(10px, 3vw, 20.0px)' }}>
-                  <div className="text-center mb-4">
-                    <h3 className="msl-navy" style={{ fontSize: 'clamp(18px, 4vw, 28.0px)', fontWeight: '800' }}>System Architecture</h3>
-                    <p className="msl-text-body">A scalable, hospital-wide IoT infrastructure.</p>
-                  </div>
-                  <div className="row g-4">
-                    <div className="col-md-6 col-lg-3">
-                      <div className="p4-feature-card h-100" style={{ padding: 'clamp(10px, 3vw, 25.0px)', textAlign: 'center', borderRadius: '20px' }}>
-                        <i className="bx bx-purchase-tag" style={{ fontSize: 'clamp(18px, 4vw, 32.0px)', color: '#c0001a', marginBottom: '15px' }}></i>
-                        <h6 style={{ fontSize: '16px', fontWeight: '800', marginBottom: '10px' }}>Active Smart Tags</h6>
-                        <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.5' }}>Long-battery BLE/RFID beacons securely attached to mobile assets.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                      <div className="p4-feature-card h-100" style={{ padding: 'clamp(10px, 3vw, 25.0px)', textAlign: 'center', borderRadius: '20px' }}>
-                        <i className="bx bx-wifi" style={{ fontSize: 'clamp(18px, 4vw, 32.0px)', color: '#1a2a4a', marginBottom: '15px' }}></i>
-                        <h6 style={{ fontSize: '16px', fontWeight: '800', marginBottom: '10px' }}>Indoor Gateways</h6>
-                        <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.5' }}>Ceiling-mounted receivers mapping the hospital layout for precise positioning.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                      <div className="p4-feature-card h-100" style={{ padding: 'clamp(10px, 3vw, 25.0px)', textAlign: 'center', borderRadius: '20px' }}>
-                        <i className="bx bx-bar-chart-alt-2" style={{ fontSize: 'clamp(18px, 4vw, 32.0px)', color: '#c0001a', marginBottom: '15px' }}></i>
-                        <h6 style={{ fontSize: '16px', fontWeight: '800', marginBottom: '10px' }}>Cloud Analytics Engine</h6>
-                        <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.5' }}>Processes location data to generate utilization and movement reports.</p>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-3">
-                      <div className="p4-feature-card h-100" style={{ padding: 'clamp(10px, 3vw, 25.0px)', textAlign: 'center', borderRadius: '20px' }}>
-                        <i className="bx bx-mobile-alt" style={{ fontSize: 'clamp(18px, 4vw, 32.0px)', color: '#1a2a4a', marginBottom: '15px' }}></i>
-                        <h6 style={{ fontSize: '16px', fontWeight: '800', marginBottom: '10px' }}>Staff Mobile App</h6>
-                        <p style={{ fontSize: '13px', margin: 0, lineHeight: '1.5' }}>Provides live search, turn-by-turn routing, and status updates.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Workflow section */}
-                <div style={{ padding: 'clamp(15px, 5vw, 40.0px) clamp(15px, 5vw, 60.0px)' }}>
-                  <div style={{ background: '#f8fafc', borderRadius: '24px', padding: 'clamp(15px, 5vw, 40.0px)', border: '1px solid #e2e8f0' }}>
-                    <div className="text-center mb-5">
-                      <span style={{ display: 'inline-block', background: 'rgba(192,0,26,0.1)', color: '#c0001a', fontSize: '12px', fontWeight: '800', letterSpacing: '1px', textTransform: 'uppercase', padding: '5px 12px', borderRadius: '20px', marginBottom: '15px' }}>
-                        Workflow
-                      </span>
-                      <h3 className="msl-navy" style={{ fontSize: 'clamp(18px, 4vw, 28.0px)', fontWeight: '800', marginBottom: '15px' }}>
-                        Asset Discovery & Lifecycle Workflow
-                      </h3>
-                      <p className="msl-text-body" style={{ fontSize: '16px', maxWidth: '600px', margin: '0 auto' }}>
-                        From initial tagging to scheduled maintenance, our system fully automates the lifecycle tracking of your medical equipment.
-                      </p>
-                    </div>
-
-                    <div className="row g-3 justify-content-center position-relative">
-                      {[
-                        { step: 1, title: 'Tag Deployed', desc: 'Asset fitted with BLE tracking tag.', icon: 'bx-purchase-tag' },
-                        { step: 2, title: 'Asset Moved', desc: 'Equipment leaves standard zone.', icon: 'bx-transfer' },
-                        { step: 3, title: 'Gateway Scan', desc: 'Indoor network detects movement.', icon: 'bx-radar' },
-                        { step: 4, title: 'Location Updated', desc: 'Floor plan map refreshes in real time.', icon: 'bx-map-alt' },
-                        { step: 5, title: 'Nurse Searches', desc: 'Staff queries app for nearest pump.', icon: 'bx-search-alt' },
-                        { step: 6, title: 'Asset Retrieved', desc: 'Nurse guided directly to the asset.', icon: 'bx-check-circle' },
-                        { step: 7, title: 'Usage Logged', desc: 'Analytics engine updates runtime.', icon: 'bx-line-chart' },
-                        { step: 8, title: 'Maintenance Alert', desc: 'Engineering notified for PM.', icon: 'bx-wrench' },
-                      ].map((s, idx) => (
-                        <div key={idx} className="col-12 col-sm-6 col-md-3 col-xl flex-fill" style={{ zIndex: 1 }}>
-                          <div className="p4-feature-card text-center" style={{ padding: 'clamp(10px, 3vw, 25.0px) 10px', height: '100%', position: 'relative' }}>
-                            <div style={{ width: '26px', height: '26px', background: '#1a2a4a', color: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold', fontSize: '12px', position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', border: '3px solid #f8fafc', zIndex: 2 , flexWrap: 'wrap'}}>
-                              {s.step}
-                            </div>
-                            <div className="p4-feature-icon" style={{ width: '35px', height: '35px', margin: '10px auto 10px', fontSize: 'clamp(15px, 3vw, 18.0px)' }}>
-                              <i className={`bx ${s.icon}`}></i>
-                            </div>
-                            <h5 style={{ fontSize: '13px', marginBottom: '8px', fontWeight: '800' }}>{s.title}</h5>
-                            <p className="msl-text-body" style={{ fontSize: '11px', margin: 0, lineHeight: '1.4' }}>{s.desc}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Applications & Features (Logo Points) */}
-                <div style={{ padding: '0px clamp(15px, 5vw, 60.0px) clamp(15px, 5vw, 60.0px)' }}>
-                  <div className="text-center mb-4">
-                    <h3 className="msl-navy" style={{ fontSize: 'clamp(18px, 4vw, 24.0px)', fontWeight: '800' }}>Comprehensive Tracking Use Cases</h3>
-                    <p className="msl-text-body">Optimize equipment availability across the entire facility.</p>
-                  </div>
-                  <div className="d-flex flex-wrap justify-content-center gap-3">
-                    {[
-                      { icon: 'bx-injection', title: 'IV Pumps' },
-                      { icon: 'bx-wheelchair', title: 'Wheelchairs' },
-                      { icon: 'bx-pulse', title: 'Defibrillators' },
-                      { icon: 'bx-bed', title: 'Patient Beds' },
-                      { icon: 'bx-scan', title: 'Portable Ultrasounds' },
-                      { icon: 'bx-pie-chart-alt', title: 'Utilization Analytics' },
-                      { icon: 'bx-wrench', title: 'Maintenance Sync' },
-                      { icon: 'bx-door-open', title: 'Anti-Theft Geofencing' },
-                      { icon: 'bx-shield-plus', title: 'Infection Control Routing' }
-                    ].map((app, idx) => (
-                      <div key={idx} style={{ background: '#fff', border: '1px solid #cbd5e1', borderRadius: '50px', padding: '10px clamp(10px, 3vw, 20.0px)', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 2px 10px rgba(0,0,0,0.02)' , flexWrap: 'wrap'}}>
-                        <i className={`bx ${app.icon}`} style={{ fontSize: 'clamp(15px, 3vw, 20.0px)', color: '#c0001a' }}></i>
-                        <span style={{ fontSize: '14px', fontWeight: '700', color: '#1a2a4a' }}>{app.title}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="cta-section">
-                  <div>
-                    <h4 style={{ margin: '0 0 5px 0', fontWeight: '800', fontSize: 'clamp(15px, 3vw, 22.0px)', color: '#fff' }}>Optimize Your Asset Utilization</h4>
-                    <p style={{ margin: 0, color: '#cbd5e1', fontSize: '15px' }}>Stop wasting time searching. Start tracking with precision.</p>
-                  </div>
-                  <a href="#contact" className="cta-btn-hover">Explore Tracking Solutions <i className="bx bx-right-arrow-alt"></i></a>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* =========================================
-              PRODUCT 4: Smart AI Locker for Nurse Tablets
+              PRODUCT 3: Smart AI Locker for Nurse Tablets
           ========================================= */}
           <section id="nurse-tablet" ref={nurseTabletRef} style={{ background: '#f8fafc', paddingBottom: '20px' }}>
             <div className="caution-stripe msl-bg-navy" style={{ padding: 'clamp(15px, 5vw, 60.0px) 0', borderBottom: '4px solid #c0001a', marginBottom: '40px' }}>
               <div className="container text-center position-relative" style={{ zIndex: 1 }}>
                 <span style={{ display: 'inline-block', background: 'rgba(255,255,255,0.1)', color: '#fff', fontSize: '12px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', padding: '6px 16px', borderRadius: '30px', marginBottom: '20px' }}>
-                  Product 04
+                  Product 03
                 </span>
                 <h2 style={{ color: '#fff', fontSize: 'clamp(18px, 4vw, 36.0px)', fontWeight: '800', marginBottom: '15px' }}>
                   Smart AI Locker for Nurse Tablets
@@ -1248,13 +1027,13 @@ const SmartHospitals = () => {
           </section>
 
           {/* =========================================
-              PRODUCT 5: Impress Stock - AI Enabled Medicine Access
+              PRODUCT 4: Impress Stock - AI Enabled Medicine Access
           ========================================= */}
           <section id="impress-stock" ref={impressStockRef} style={{ background: '#f8fafc', paddingBottom: '20px' }}>
             <div className="caution-stripe msl-bg-navy" style={{ padding: 'clamp(15px, 5vw, 60.0px) 0', borderBottom: '4px solid #c0001a', marginBottom: '40px' }}>
               <div className="container text-center position-relative" style={{ zIndex: 1 }}>
                 <span style={{ display: 'inline-block', background: 'rgba(255,255,255,0.1)', color: '#fff', fontSize: '12px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', padding: '6px 16px', borderRadius: '30px', marginBottom: '20px' }}>
-                  Product 05
+                  Product 04
                 </span>
                 <h2 style={{ color: '#fff', fontSize: 'clamp(18px, 4vw, 36.0px)', fontWeight: '800', marginBottom: '15px' }}>
                   Impress Stock: AI Enabled Medicine Access

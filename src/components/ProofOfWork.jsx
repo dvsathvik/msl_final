@@ -168,7 +168,7 @@ const ProofOfWork = () => {
         `}
       </style>
       
-      <section id="proof-of-work" className="section-white" style={{ padding: 'clamp(40px, 8vw, 80px) 0', background: '#f8fafc' }}>
+      <section id="proof-of-work" className="section-white" style={{ padding: '0 0 clamp(40px, 8vw, 80px)' }}>
         <div className="container" data-aos="fade-up">
           
           {/* Section Header */}

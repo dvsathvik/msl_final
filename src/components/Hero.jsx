@@ -325,6 +325,38 @@ const Hero = () => {
               </div>
             </div>
           </SwiperSlide>
+
+          <SwiperSlide className="hero-slide slide-10">
+            <div className="container hero-content">
+              <div className="hero-grid">
+                <div className="hero-text">
+                  <span className="hero-tag">RFID • VISITOR TRACKING • INDUSTRY 4.0</span>
+                  <h1>RFID Visitor Tracking <span className="highlight">Solutions</span></h1>
+
+                  <div className="hero-image-col mobile-only-img mobile-only" style={{ margin: '10px 0', width: '100%', padding: 0 }}>
+                    <div className="hero-image-panel" style={{ width: '100%', borderRadius: '12px', overflow: 'hidden' }}>
+                      <img src="/assets/img/customizations/rfid_slider.webp" alt="RFID Visitor Tracking Solutions" style={{ width: '100%', height: '200px', objectFit: 'cover', display: 'block' }} />
+                    </div>
+                  </div>
+                  <p>Real-time RFID visitor tracking for exhibitions and manufacturing. Seamlessly monitor live location, restricted zones, and attendance via centralized dashboards.</p>
+                  <div className="hero-mini-features">
+                    <span>RFID Wristbands</span>
+                    <span>Real-Time Tracking</span>
+                    <span>Zone Access Control</span>
+                  </div>
+                  <div className="hero-buttons">
+                    <Link to="/products/customization/rfid" className="hero-btn primary-btn">Explore</Link>
+                    <a href="#contact" className="hero-btn secondary-btn">Request Demo</a>
+                  </div>
+                </div>
+                <div className="hero-image-col desktop-only-img desktop-only">
+                  <div className="hero-image-panel">
+                    <img src="/assets/img/customizations/rfid_slider.webp" alt="RFID Visitor Tracking Solutions" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
           
           <div className="hero-controls-wrapper">
             <div className="hero-pagination"></div>

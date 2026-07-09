@@ -16,6 +16,7 @@ const Customization = () => {
   const thermalRef = useRef(null);
   const dehazeRef = useRef(null);
   const defectRef = useRef(null);
+  const rfidRef = useRef(null);
 
   useEffect(() => {
     if (productId === 'face' && faceRef.current) {
@@ -28,6 +29,8 @@ const Customization = () => {
       dehazeRef.current.scrollIntoView({ behavior: 'smooth' });
     } else if (productId === 'defect' && defectRef.current) {
       defectRef.current.scrollIntoView({ behavior: 'smooth' });
+    } else if (productId === 'rfid' && rfidRef.current) {
+      rfidRef.current.scrollIntoView({ behavior: 'smooth' });
     } else {
       window.scrollTo(0, 0);
     }
@@ -37,6 +40,15 @@ const Customization = () => {
     <>
       {/* Breadcrumb */}
       <PageBreadcrumb productName="Customization" />
+
+      <style>{`
+        .product-hover-zoom {
+          transition: transform 0.4s ease !important;
+        }
+        .product-hover-zoom:hover {
+          transform: scale(1.05) !important;
+        }
+      `}</style>
 
 {/* Hero Slider */}
       <section id="hero-slider" className="heroSwiper msl-bg-navy industrial-grid" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
@@ -237,7 +249,44 @@ const Customization = () => {
             </div>
           </SwiperSlide>
 
-          {/* Slide 6 - Custom Orders */}
+          {/* Slide 6 - RFID Tracking */}
+          <SwiperSlide>
+            <div className="slider-redesign">
+              <div className="slider-wrap">
+                <div className="stage">
+                  <div className="card">
+                    <div className="card-grid">
+                      <div className="text-col">
+                        <span className="tag">RFID &bull; VISITOR TRACKING &bull; INDUSTRY 4.0</span>
+                        <h1>RFID Visitor Tracking<br/><span>Solutions</span></h1>
+                        <p className="subtext">Track visitors in real time across exhibitions and manufacturing facilities.</p>
+                        <div className="cap-grid">
+                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-rfid"></i></span><span className="cap-label">RFID Wristbands</span></div>
+                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-map-pin"></i></span><span className="cap-label">Real-Time Tracking</span></div>
+                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-shield-quarter"></i></span><span className="cap-label">Zone Access Control</span></div>
+                          <div className="cap-item"><span className="cap-icon"><i className="bx bx-bar-chart-alt-2"></i></span><span className="cap-label">Live Analytics</span></div>
+                        </div>
+                        <div className="cta-row">
+                          <a href="#rfid" onClick={(e) => { e.preventDefault(); rfidRef.current?.scrollIntoView({ behavior: 'smooth' }); }} className="btn btn-primary">Explore Solution <i className="bx bx-right-arrow-alt"></i></a>
+                        </div>
+                      </div>
+                      <div className="image-col">
+                        <div className="image-panel">
+                          <img src="/assets/img/customizations/rfid_slider.webp" alt="RFID Visitor Tracking Solutions" />
+                        </div>
+                        <div className="spec-chip">
+                          <div className="spec-label">Key Capability</div>
+                          <div className="spec-value">Live Visitor Location</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          
+          {/* Slide 7 - Custom Orders */}
           <SwiperSlide>
             <div className="slider-redesign">
               <div className="slider-wrap">
@@ -273,6 +322,7 @@ const Customization = () => {
               </div>
             </div>
           </SwiperSlide>
+
 
           <div className="hero-controls-wrapper">
             <div className="hero-pagination" style={{ '--swiper-pagination-color': '#c0001a' }}></div>
@@ -345,7 +395,7 @@ const Customization = () => {
                   </div>
                   <div className="col-lg-6">
                     <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
-                      <img src="/assets/img/ai/edge_ai_dashboard.webp" alt="Face Analytics Dashboard" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                      <img src="/assets/img/ai/edge_ai_dashboard.webp" alt="Face Analytics Dashboard" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block' }} />
                     </div>
                   </div>
                 </div>
@@ -356,7 +406,7 @@ const Customization = () => {
                 <div className="row g-5 align-items-center">
                   <div className="col-lg-5 order-2 order-lg-1">
                     <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)', background: '#f8fafc', border: '1px solid #e2e8f0', padding: 'clamp(10px, 3vw, 20.0px)', display: 'flex', alignItems: 'center', justifyContent: 'center' , flexWrap: 'wrap'}}>
-                      <img src="/assets/img/ai/face_analytics_soc.webp" alt="Broadcom SoC Platform" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '16px' }} />
+                      <img src="/assets/img/ai/face_analytics_soc.webp" alt="Broadcom SoC Platform" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '16px' }} />
                     </div>
                   </div>
                   <div className="col-lg-7 order-1 order-lg-2">
@@ -434,10 +484,6 @@ const Customization = () => {
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' , flexWrap: 'wrap'}}>
                           <i className="bx bx-error" style={{ fontSize: 'clamp(18px, 4vw, 36.0px)', color: '#0E47A1', marginBottom: '10px' }}></i>
                           <p style={{ fontSize: '11px', color: '#1A2A4A', fontWeight: '600', lineHeight: '1.4' }}>Instant Watchlist Alerts</p>
-                        </div>
-                        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' , flexWrap: 'wrap'}}>
-                          <i className="bx bx-check-shield" style={{ fontSize: 'clamp(18px, 4vw, 36.0px)', color: '#0E47A1', marginBottom: '10px' }}></i>
-                          <p style={{ fontSize: '11px', color: '#1A2A4A', fontWeight: '600', lineHeight: '1.4' }}>Privacy Regulation Compliant</p>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' , flexWrap: 'wrap'}}>
                           <i className="bx bx-data" style={{ fontSize: 'clamp(18px, 4vw, 36.0px)', color: '#0E47A1', marginBottom: '10px' }}></i>
@@ -524,7 +570,7 @@ const Customization = () => {
                 <div className="row g-5 align-items-center">
                   <div className="col-lg-5">
                     <div className="rounded-image-wrapper">
-                      <img src="/assets/img/ai/ai_surveillance.webp" alt="Aerial Intelligence" />
+                      <img src="/assets/img/ai/ai_surveillance.webp" alt="Aerial Intelligence" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '16px' }} />
                     </div>
                   </div>
                   <div className="col-lg-7">
@@ -655,7 +701,7 @@ const Customization = () => {
               {/* Top Split: Image & Problem Statement */}
               <div className="row g-0">
                 <div className="col-lg-5" style={{ background: '#f8fafc', padding: 'clamp(15px, 5vw, 40.0px)', display: 'flex', alignItems: 'center', justifyContent: 'center' , flexWrap: 'wrap'}}>
-                  <img src="/assets/img/ai/thermal_camera.webp" alt="Thermal Camera" style={{ maxWidth: '100%', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+                  <img src="/assets/img/ai/thermal_camera.webp" alt="Thermal Camera" className="product-hover-zoom" style={{ maxWidth: '100%', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
                 </div>
                 <div className="col-lg-7" style={{ padding: 'clamp(15px, 5vw, 50.0px) clamp(15px, 5vw, 40.0px)', background: '#fff' }}>
                   <div className="mb-5">
@@ -795,7 +841,7 @@ const Customization = () => {
                   <div className="col-lg-6 text-center">
 
                     <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.1)', background: '#000', display: 'inline-block', position: 'relative', width: '100%' }}>
-                      <img src="/assets/img/ai/dehaze_landscape.webp" alt="Dehaze Split Demo" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
+                      <img src="/assets/img/ai/dehaze_landscape.webp" alt="Dehaze Split Demo" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'contain' }} />
                       <div style={{ position: 'absolute', top: '15px', left: '15px', background: 'rgba(0,0,0,0.7)', color: '#fff', padding: '5px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: '700' }}>RAW (Unusable)</div>
                       <div style={{ position: 'absolute', top: '15px', right: '15px', background: 'rgba(192,0,26,0.9)', color: '#fff', padding: '5px 10px', borderRadius: '6px', fontSize: '11px', fontWeight: '700' }}>ENHANCED</div>
                     </div>
@@ -921,7 +967,7 @@ const Customization = () => {
                 <div className="row g-5 align-items-center mb-5">
                   <div className="col-lg-6">
                     <div style={{ borderRadius: '16px', overflow: 'hidden', boxShadow: '0 15px 35px rgba(0,0,0,0.1)' }}>
-                      <img src="/assets/img/manufacturing_automations/manufacturing_defect_qa.webp" alt="Product Defect Detection" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                      <img src="/assets/img/manufacturing_automations/manufacturing_defect_qa.webp" alt="Product Defect Detection" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block' }} />
                     </div>
                   </div>
                   <div className="col-lg-6">
@@ -1097,6 +1143,244 @@ const Customization = () => {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* =========================================
+            PRODUCT 06: RFID Visitor Tracking
+        ========================================= */}
+        <section id="rfid" ref={rfidRef} style={{ paddingBottom: '40px' }}>
+          <div className="caution-stripe msl-bg-navy" style={{ padding: 'clamp(15px, 5vw, 60.0px) 0', borderBottom: '4px solid #c0001a', marginBottom: '40px' }}>
+            <div className="container text-center position-relative" style={{ zIndex: 1 }}>
+              <span style={{ display: 'inline-block', background: 'rgba(255,255,255,0.1)', color: '#fff', fontSize: '12px', fontWeight: '700', letterSpacing: '2px', textTransform: 'uppercase', padding: '6px 16px', borderRadius: '30px', marginBottom: '20px' }}>
+                Product 06
+              </span>
+              <h2 style={{ color: '#fff', fontSize: 'clamp(18px, 4vw, 36.0px)', fontWeight: '800', marginBottom: '15px' }}>
+                RFID Visitor Tracking Solutions
+              </h2>
+              <p style={{ color: '#cbd5e1', fontSize: 'clamp(15px, 3vw, 18.0px)', maxWidth: '800px', margin: '0 auto', fontWeight: '300' }}>
+                <strong style={{color: '#fff', fontWeight: '600'}}>Track visitors in real time across exhibitions and manufacturing facilities.</strong><br/>
+                Monitor entry/exit, live location, restricted-zone access, attendance, and emergency evacuation with centralized dashboards using RFID wristband technology.
+              </p>
+            </div>
+          </div>
+
+          <div className="container" data-aos="fade-up">
+            <div style={{ background: '#fff', borderRadius: '24px', padding: '0', overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,0.04)', border: '1px solid #CBD5E1' }}>
+              
+              {/* Intro & Overview Block inside Card */}
+              <div style={{ background: '#0E1628', color: '#fff', padding: 'clamp(15px, 5vw, 50.0px) clamp(15px, 5vw, 40.0px)' }}>
+                <div className="row align-items-center g-5">
+                  <div className="col-lg-6">
+                    <div style={{ marginBottom: '15px', display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+                      <span style={{ display: 'inline-block', background: 'rgba(192,0,26,0.1)', color: '#c0001a', fontSize: '12px', fontWeight: 'bold', textTransform: 'uppercase', padding: '6px 16px', borderRadius: '30px' }}>
+                        <i className="bx bx-chip" style={{ marginRight: '5px' }}></i> INDUSTRY 4.0
+                      </span>
+                    </div>
+                    <h3 style={{ fontSize: 'clamp(18px, 4vw, 32.0px)', fontWeight: '800', lineHeight: '1.2', marginBottom: '20px', color: '#fff' }}>
+                      Live Visitor Analytics & <span style={{ color: '#FF4D4D' }}>Zone Security</span>
+                    </h3>
+                    <p style={{ color: '#94A3B8', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px' }}>
+                      Large scale facilities face constant challenges tracking external personnel. Our RFID Visitor Tracking solution provides absolute visibility across thousands of square meters, ensuring safety, compliance, and operational efficiency through seamless automated monitoring.
+                    </p>
+                    <div style={{ marginTop: '20px' }}>
+                      <h4 style={{ color: '#fff', fontSize: 'clamp(15px, 3vw, 22.0px)', fontWeight: '800', marginBottom: '15px' }}>Operational Challenges</h4>
+                      <ul style={{ color: '#94A3B8', fontSize: '15px', lineHeight: '1.6', paddingLeft: '0', margin: '0 0 20px 0', listStyleType: 'none' }}>
+                        <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'flex-start' , flexWrap: 'wrap'}}><span style={{ color: '#FF4D4D', marginRight: '10px', fontSize: 'clamp(15px, 3vw, 20.0px)', lineHeight: '1.2' }}>&bull;</span> <span><strong style={{ color: '#E2E8F0' }}>Unauthorized Access:</strong> Visitors entering restricted or hazardous areas unseen.</span></li>
+                        <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'flex-start' , flexWrap: 'wrap'}}><span style={{ color: '#FF4D4D', marginRight: '10px', fontSize: 'clamp(15px, 3vw, 20.0px)', lineHeight: '1.2' }}>&bull;</span> <span><strong style={{ color: '#E2E8F0' }}>Evacuation Risks:</strong> Inability to account for all visitors during emergencies.</span></li>
+                        <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'flex-start' , flexWrap: 'wrap'}}><span style={{ color: '#FF4D4D', marginRight: '10px', fontSize: 'clamp(15px, 3vw, 20.0px)', lineHeight: '1.2' }}>&bull;</span> <span><strong style={{ color: '#E2E8F0' }}>Manual Logging:</strong> Tedious, error-prone entry/exit logs causing bottlenecks.</span></li>
+                      </ul>
+                      
+                      <h4 style={{ color: '#fff', fontSize: 'clamp(15px, 3vw, 22.0px)', fontWeight: '800', marginBottom: '15px' }}>Our Solution</h4>
+                      <ul style={{ color: '#94A3B8', fontSize: '15px', lineHeight: '1.6', paddingLeft: '0', margin: 0, listStyleType: 'none' }}>
+                        <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'flex-start' , flexWrap: 'wrap'}}><span style={{ color: '#10b981', marginRight: '10px', fontSize: 'clamp(15px, 3vw, 20.0px)', lineHeight: '1.2' }}>&bull;</span> <span><strong style={{ color: '#E2E8F0' }}>Centralized Dashboards:</strong> Unified view of all visitor movements across the entire facility.</span></li>
+                        <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'flex-start' , flexWrap: 'wrap'}}><span style={{ color: '#10b981', marginRight: '10px', fontSize: 'clamp(15px, 3vw, 20.0px)', lineHeight: '1.2' }}>&bull;</span> <span><strong style={{ color: '#E2E8F0' }}>Live Location Tracking:</strong> Instantly pinpoint any visitor's location via RFID wristbands.</span></li>
+                        <li style={{ marginBottom: '10px', display: 'flex', alignItems: 'flex-start' , flexWrap: 'wrap'}}><span style={{ color: '#10b981', marginRight: '10px', fontSize: 'clamp(15px, 3vw, 20.0px)', lineHeight: '1.2' }}>&bull;</span> <span><strong style={{ color: '#E2E8F0' }}>Automated Alerts:</strong> Real-time notifications for zone breaches and emergencies.</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+                      <img src="/assets/img/customizations/rfid_dashboard.webp" alt="RFID Visitor Dashboard" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Our Solution & Architecture */}
+              <div style={{ padding: 'clamp(15px, 5vw, 50.0px) clamp(15px, 5vw, 40.0px)', background: '#fff' }}>
+                <div className="row g-5 align-items-center">
+                  <div className="col-lg-5 order-2 order-lg-1">
+                    <div style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.08)' }}>
+                      <img src="/assets/img/customizations/rfid_exhibition.webp" alt="RFID Exhibition Booth" className="product-hover-zoom" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                    </div>
+                  </div>
+                  <div className="col-lg-7 order-1 order-lg-2">
+                    <h4 className="msl-navy" style={{ fontSize: 'clamp(18px, 4vw, 28.0px)', fontWeight: '800', marginBottom: '20px' }}>Key Features</h4>
+                    <div className="row g-4">
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-map-pin"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Real-Time Visitor Tracking</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Track visitor movement across the entire facility with live location updates.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-log-in-circle"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Automated Logging</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Record visitor check-in and check-out automatically without manual intervention.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-error-circle"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Restricted Zone Monitoring</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Allow or deny access based on permissions and instantly detect unauthorized movement.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-id-card"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Smart RFID Badges</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Lightweight RFID cards or wristbands uniquely identify every visitor throughout their stay.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-bar-chart-alt-2"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Live Dashboard & Analytics</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Visualize visitor count, occupancy, movement trends, and zone utilization.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-run"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Emergency Evacuation</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Know exactly who remains inside the facility and generate instant evacuation reports.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-history"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Attendance & History</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Maintain accurate records for audits, compliance, and future reference.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '15px' }}>
+                          <div style={{ width: '40px', height: '40px', background: '#F1F5F9', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a2a4a', fontSize: '20px', flexShrink: 0 }}>
+                            <i className="bx bx-bell"></i>
+                          </div>
+                          <div>
+                            <h5 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2a4a', marginBottom: '5px' }}>Alerts & Notifications</h5>
+                            <p style={{ fontSize: '13px', color: '#64748b', lineHeight: '1.5', margin: 0 }}>Receive instant alerts for unauthorized access, overstaying visitors, and emergencies.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              {/* Benefits & Applications Section */}
+              <div style={{ padding: 'clamp(15px, 5vw, 50.0px) clamp(15px, 5vw, 40.0px) clamp(10px, 3vw, 25.0px)', background: '#F8FAFC' }}>
+                <div className="row g-5">
+                  <div className="col-lg-6">
+                    <div style={{ background: '#fff', padding: 'clamp(15px, 5vw, 30.0px)', borderRadius: '16px', border: '1px solid #e2e8f0', height: '100%' }}>
+                      <h4 style={{ color: '#1a2a4a', fontSize: 'clamp(16px, 3vw, 20.0px)', fontWeight: '800', marginBottom: '20px' }}>Benefits</h4>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><i className="bx bx-check" style={{ color: '#10b981', fontSize: '20px' }}></i> <div><strong style={{ color: '#1a2a4a' }}>Improve Facility Security:</strong> <span style={{ color: '#64748b' }}>Prevent unauthorized access and monitor visitor movement continuously.</span></div></li>
+                        <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><i className="bx bx-check" style={{ color: '#10b981', fontSize: '20px' }}></i> <div><strong style={{ color: '#1a2a4a' }}>Reduce Manual Work:</strong> <span style={{ color: '#64748b' }}>Automate visitor registration, tracking, and reporting.</span></div></li>
+                        <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><i className="bx bx-check" style={{ color: '#10b981', fontSize: '20px' }}></i> <div><strong style={{ color: '#1a2a4a' }}>Faster Visitor Processing:</strong> <span style={{ color: '#64748b' }}>Reduce waiting time with quick RFID-based identification.</span></div></li>
+                        <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><i className="bx bx-check" style={{ color: '#10b981', fontSize: '20px' }}></i> <div><strong style={{ color: '#1a2a4a' }}>Better Compliance:</strong> <span style={{ color: '#64748b' }}>Maintain digital records for audits and safety regulations.</span></div></li>
+                        <li style={{ marginBottom: '15px', display: 'flex', gap: '10px' }}><i className="bx bx-check" style={{ color: '#10b981', fontSize: '20px' }}></i> <div><strong style={{ color: '#1a2a4a' }}>Enhanced Visitor Experience:</strong> <span style={{ color: '#64748b' }}>Provide seamless and contactless entry without repetitive paperwork.</span></div></li>
+                        <li style={{ display: 'flex', gap: '10px' }}><i className="bx bx-check" style={{ color: '#10b981', fontSize: '20px' }}></i> <div><strong style={{ color: '#1a2a4a' }}>Actionable Insights:</strong> <span style={{ color: '#64748b' }}>Analyze visitor trends, occupancy rates, and facility usage through intelligent dashboards.</span></div></li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div className="col-lg-6">
+                    <div style={{ background: '#fff', padding: 'clamp(15px, 5vw, 30.0px)', borderRadius: '16px', border: '1px solid #e2e8f0', height: '100%' }}>
+                      <h4 style={{ color: '#1a2a4a', fontSize: 'clamp(16px, 3vw, 20.0px)', fontWeight: '800', marginBottom: '20px' }}>Why Choose Our Solution?</h4>
+                      <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Real-time visibility across the entire facility</span></li>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Easy integration with existing access control systems</span></li>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Highly scalable architecture</span></li>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Cloud or on-premise deployment</span></li>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Enterprise-grade security</span></li>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Customizable dashboards and reports</span></li>
+                        <li style={{ marginBottom: '12px', display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Low maintenance RFID infrastructure</span></li>
+                        <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}><div style={{ width: '6px', height: '6px', background: '#c0001a', borderRadius: '50%' }}></div> <span style={{ color: '#4a5568' }}>Fast deployment with minimal operational disruption</span></li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="col-12">
+                    <div style={{ background: '#fff', padding: 'clamp(15px, 5vw, 30.0px)', borderRadius: '16px', border: '1px solid #e2e8f0' }}>
+                      <h4 style={{ color: '#1a2a4a', fontSize: 'clamp(16px, 3vw, 20.0px)', fontWeight: '800', marginBottom: '20px', textAlign: 'center' }}>Applications</h4>
+                      <div className="row g-3">
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bx-building-house" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Manufacturing Plants</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Monitor contractors, vendors, and guests.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bx-buildings" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Corporate Offices</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Secure employee and visitor movement.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bx-plus-medical" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Hospitals</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Track patients, attendants, and medical reps.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bxs-graduation" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Educational Institutions</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Manage campus visitors securely.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bx-package" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Warehouses & Logistics</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Track drivers, suppliers, and visitors.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bx-slideshow" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Exhibitions & Trade Shows</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Monitor attendee movement and traffic.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bx-test-tube" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Research Laboratories</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Restrict access to sensitive areas.</p></div></div>
+                        <div className="col-md-3 col-sm-6"><div style={{ padding: '15px', background: '#f8fafc', borderRadius: '8px', textAlign: 'center', height: '100%' }}><i className="bx bxs-institution" style={{ fontSize: '24px', color: '#1a2a4a', marginBottom: '10px' }}></i><h6 style={{ fontSize: '13px', fontWeight: '700', color: '#1a2a4a' }}>Government & Defense</h6><p style={{ fontSize: '11px', color: '#64748b', margin: 0 }}>Secure authentication and monitoring.</p></div></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-12">
+                    <div style={{ background: 'linear-gradient(135deg, #0E1628 0%, #1a2a4a 100%)', padding: 'clamp(20px, 4vw, 40.0px)', borderRadius: '16px', textAlign: 'center', color: '#fff', border: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 10px 30px rgba(0,0,0,0.15)' }}>
+                      <h4 style={{ fontSize: 'clamp(18px, 4vw, 24.0px)', fontWeight: '800', marginBottom: '15px' , color: '#fff' }}>Ready to Modernize Visitor Management?</h4>
+                      <p style={{ fontSize: '15px', color: '#94A3B8', marginBottom: '25px', maxWidth: '700px', margin: '0 auto 25px' }}>
+                        Enhance security, improve operational efficiency, and gain complete visibility of visitor movement with our intelligent RFID Visitor Tracking Solution.
+                      </p>
+                      <div style={{ display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
+                        <a href="#contact" className="msl-btn" style={{ background: '#c0001a', color: '#fff', padding: '12px 25px', borderRadius: '8px', fontWeight: '600', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px', border: 'none' }}>
+                          Request a Demo <i className="bx bx-right-arrow-alt"></i>
+                        </a>
+                        <a href="#contact" className="msl-btn-outline" style={{ background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,0.3)', padding: '12px 25px', borderRadius: '8px', fontWeight: '600', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                          Contact Our Experts
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

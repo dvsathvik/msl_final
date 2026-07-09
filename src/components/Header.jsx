@@ -78,7 +78,6 @@ const Header = () => {
               <div className="nav-dropdown-menu">
                 <Link to="/products/hospitals/automation"><i className="bi bi-hospital"></i> Smart Hospital IOT Automation & Monitoring System</Link>
                 <Link to="/products/hospitals/locker"><i className="bi bi-shield-lock"></i> AI Secured Locker Systems for Drugs</Link>
-                <Link to="/products/hospitals/asset"><i className="bi bi-box-seam"></i> Asset Management</Link>
                 <Link to="/products/hospitals/nurse-tablet"><i className="bi bi-tablet"></i> Smart AI Locker for Nurse Tablets</Link>
                 <Link to="/products/hospitals/impress-stock"><i className="bi bi-inboxes"></i> Impress Stock AI Medicine Access</Link>
               </div>
@@ -101,6 +100,7 @@ const Header = () => {
                 <Link to="/products/customization/thermal"><i className="bi bi-thermometer-half"></i> Thermal camera distance Detection</Link>
                 <Link to="/products/customization/dehaze"><i className="bi bi-cloud-haze"></i> Dehaze / Snow-Fog Removal</Link>
                 <Link to="/products/customization/defect"><i className="bi bi-search"></i> Product Defect Detect</Link>
+                <Link to="/products/customization/rfid"><i className="bi bi-person-badge"></i> RFID Visitor Tracking Solutions</Link>
               </div>
             </div>
             

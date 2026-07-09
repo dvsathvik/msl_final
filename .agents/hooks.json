@@ -1,0 +1,15 @@
+{
+  "sound-notify": {
+    "Stop": [
+      { "type": "command", "command": "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File .agents/hooks/notify.ps1 complete" }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "run_command|write_to_file|replace_file_content|multi_replace_file_content|browser_.*",
+        "hooks": [
+          { "type": "command", "command": "powershell.exe -ExecutionPolicy Bypass -WindowStyle Hidden -File .agents/hooks/notify.ps1 permission" }
+        ]
+      }
+    ]
+  }
+}
